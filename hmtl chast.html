@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Пример: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Подключаем ваш CSS -->
+  <link rel="stylesheet" href="css jast.css">
+
+  <title>Uniqum</title>
+</head>
+<body>
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header__logo">
+      <!-- Замените путь к логотипу, если нужно -->
+      <img src="unilogo.png" alt="Uniqum Logo">
+    </div>
+
+    <nav class="header__nav" id="nav">
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#partners">Команда</a></li>
+        <li><a href="#news">Новости</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <button class="header__join-btn" onclick="window.location.href='https://bit.ly/m/Uniqum'">Присоединиться</button>
+    <!-- Бургер-меню -->
+    <div class="header__burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main>
+
+    <!-- Блок "О нас" с параллаксом и анимацией входа слева/справа -->
+    <section id="about" class="about-section">
+      <div class="about-section__overlay"></div>
+      <div class="about-section__content">
+        <h1 class="about-title">О нас</h1>
+
+        <!-- Левая колонка — «въезжает» слева -->
+        <div class="about-first-text slide-in-left">
+          <p>
+            Uniqum — проект, нацеленный на помощь особенным детям находить друзей
+            и развивать знания через дружелюбную поддержку и обучение от наших
+            волонтёров посредством проведения онлайн/оффлайн встреч. Вместе
+            с нашими волонтёрами мы будем строить безопасное пространство
+            для развития и общения.
+          </p>
+        </div>
+
+        <!-- Правая колонка — «въезжает» справа -->
+        <div class="about-second-text slide-in-right">
+          <p>
+            Цель нашего проекта — поддержать детей с синдромом Дауна, аутизмом,
+            синдромом Аспергера и другими особенностями, чтобы они могли
+            развивать навыки и иметь безопасное пространство для обучения
+            и самовыражения.
+          </p>
+          <p>
+            Каждый ребёнок будет учиться с опытным волонтёром, который станет
+            наставником и поможет освоить школьные предметы, а также
+            развить уверенность в себе.
+          </p>
+          <p>
+            Проект реализуется с любовью и заботой о каждом ребёнке, а волонтёры
+            проходят тщательный отбор, чтобы обеспечить комфортные условия
+            для ребят.
+          </p>
+        </div>
+
+        <a 
+          href="https://www.instagram.com/uniqumunited/"
+          class="about-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          УЗНАТЬ БОЛЬШЕ
+        </a>
+      </div>
+    </section>
+
+    <!-- Блок "Партнёры и Спонсоры" -->
+    <section id="partners" class="partners-section">
+      <p class="partners-subtitle">МЫ ВЕРИМ, ЧТО</p>
+      <blockquote class="partners-quote">
+        Каждый участник команды вкладывает частицу души и веры в общее дело,<br />
+        помогая вместе достичь того, что в одиночку казалось невозможным.
+      </blockquote>
+
+      <h2 class="partners-heading fade-on-scroll">ПАРТНЁРЫ</h2>
+
+      <!-- Партнёр 1 (SROD): текст слева, логотип справа -->
+      <div class="partner-card partner-left fade-on-scroll">
+        <div class="partner-info">
+          <h3>SROD.KZ</h3>
+          <p>
+            Союз создан родителями и продолжает объединять таких же родителей 
+            со всего Казахстана, имеющих детей с ограниченными возможностями...
+          </p>
+          <a 
+            href="https://srod.kz/%f0%9f%93%8c-kto-my-takie/"
+            class="partner-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            УЗНАТЬ БОЛЬШЕ
+          </a>
+        </div>
+        <div class="partner-logo-block">
+          <img src="srod.png" alt="SROD.KZ">
+        </div>
+      </div>
+
+      <!-- Партнёр 2 (ЦСИП): текст слева, логотип справа -->
+      <div class="partner-card partner-left fade-on-scroll">
+        <div class="partner-info">
+          <h3>ЦСИП</h3>
+          <p>
+            ЦСИП – уникальный для Казахстана проект, который ставит своей целью
+            разработку моделей социализации детей...
+          </p>
+          <a 
+            href="https://inclusivehub.kz/?fbclid=PAZXh0bgNhZW0CMTEAAaYUARfYB8gTJ2odwwanfjsK96sTwKBTm_inavOZH_yotKZhuZlAqPcDkRM_aem_i0v-Zp01-BTVpqP8CcsJxQ"
+            class="partner-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            УЗНАТЬ БОЛЬШЕ
+          </a>
+        </div>
+        <div class="partner-logo-block">
+          <img src="csip.jpeg" alt="csip">
+        </div>
+      </div>
+
+      <h2 class="partners-heading fade-on-scroll">СПОНСОРЫ</h2>
+
+      <!-- Спонсор (StudyRoom): логотип слева, текст справа -->
+      <div class="partner-card partner-right fade-on-scroll">
+        <div class="partner-logo-block">
+          <img src="studyroom.png" alt="StudyRoom Logo">
+        </div>
+        <div class="partner-info">
+          <h3>STUDYROOM</h3>
+          <p>
+            Образовательный центр StudyRoom — это команда преподавателей-
+            профессионалов, вдохновленная общей целью...
+          </p>
+          <a 
+            href="https://studyroom.com.kz/en/"
+            class="partner-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            УЗНАТЬ БОЛЬШЕ
+          </a>
+        </div>
+      </div>
+    </section>
+   <!-- Блок новостей (пример) -->
+<section id="news" class="news-section fade-on-scroll">
+    <p class="news-subtitle">Новости</p>
+    <h2 class="news-title">Актуальное</h2>
+    
+    <div class="news-grid">
+      <!-- Новость 1 -->
+      <article class="news-card">
+        <h3>Всемирный конгресс по инклюзии</h3>
+        <p class="news-date">5 Февраля, 2025</p>
+        <p>
+          Впервые в истории в Казахстане пройдет Всемирный конгресс по инклюзии! 
+          Эта важная новость была объявлена на престижной образовательной платформе 
+          Bett Show в Лондоне...
+        </p>
+        <!-- Убираем индивидуальную кнопку тут -->
+      </article>
+      
+      <!-- Новость 2 -->
+      <article class="news-card">
+        <h3>Развенчиваем мифы об инклюзии!</h3>
+        <p class="news-date">8 Февраля, 2025</p>
+        <p>
+            Многие до сих пор верят в стереотипы об инклюзивном образовании, 
+            но пора взглянуть на факты! В Uniqum мы создаём пространство, 
+            где каждый ребёнок может учиться, развиваться и чувствовать себя 
+            принятым. Поддержите инклюзию вместе с на...
+        </p>
+        <!-- Убираем индивидуальную кнопку тут -->
+      </article>
+      
+      <!-- Новость 3 -->
+      <article class="news-card">
+        <h3>📢 ОТКРЫТ НАБОР В UNIQUM!</h3>
+        <p class="news-date">11 Февраля, 2025</p>
+        <p>
+            🌟 Дорогие родители, рады сообщить, что начался набор в 
+            проект Uniqum! Если у вас есть ребёнок с синдромом Дауна, 
+            синдромом Аспергера или аутизмом (1, 2, 3 степени), 
+            мы готовы поддержать его обучение и социализацию...
+        </p>
+        <!-- Убираем индивидуальную кнопку тут -->
+      </article>
+    </div>
+  
+    <!-- Одна общая кнопка внизу, по центру -->
+    <div class="news-more-wrapper">
+      <a 
+        href="https://example.com/allnews" 
+        class="partner-button" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        style="margin-top: 25px;"
+      >
+        Подробнее
+      </a>
+    </div>
+  </section>
+  <section id="reviews" class="reviews-section">
+    <h2 class="reviews-title">Отзывы</h2>
+    <p class="reviews-subtitle">Нам доверяют, потому что мы открываем наше сердце</p>
+    
+    <!-- Контейнер слайдера -->
+    <div class="reviews-slider-container">
+      <div class="reviews-slider">
+        <button class="slider-btn prev">&#10094;</button>
+        <div class="review-card active">
+          <blockquote class="review-text">"Дияр так старался, всё кодил, но у него не хватает пару процентов до 5 за четверть. Жания Нуржановна, пожалуйста, поставьте 5 Дияру"</blockquote>
+          <div class="reviewer-info">
+            <img src="aikenchick.jpeg" alt="Орынбек Айкен" class="reviewer-photo">
+            <div>
+              <p class="reviewer-name">Орынбек Айкен</p>
+              <p class="reviewer-role">SMM Specialist</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <blockquote class="review-text">"ХАХАХАХАХА СОГЛ"</blockquote>
+          <div class="reviewer-info">
+            <img src="iamsotired.jpeg" alt="Кумеков Арыстан" class="reviewer-photo">
+            <div>
+              <p class="reviewer-name">Кумеков Арыстан</p>
+              <p class="reviewer-role">Со-Фаундер</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <blockquote class="review-text">"Айкен умница, ей тоже можно 5 поставить."</blockquote>
+          <div class="reviewer-info">
+            <img src="ronaldodiyar.jpg" alt="Иконников Дияр" class="reviewer-photo">
+            <div>
+              <p class="reviewer-name">Иконников Дияр</p>
+              <p class="reviewer-role">Со-Фаундер</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="unilogo.png" alt="Uniqum Logo"> <!-- Использует логотип из хедера -->
+        <p>Uniqum<br>Алматы, Казахстан<br>
+        <a href="mailto:uniqumunited@gmail.com">uniqumunited@gmail.com</a></p>
+        <em>Помогаем особенным детям расти и развиваться</em>
+      </div>
+  
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Дополнительно</h4>
+          <ul>
+            <li><a href="#">Получать рассылку</a></li>
+            <li><a href="https://www.wa.me/+77471856767" target="_blank">Написать по номеру</a></li>
+            <li><a href="html test.html">Пройти тест на аутизм</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Присоединиться</h4>
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf92NcVPTWGEq8YlEiIBqpb8MtVNGrMl7vUZqqnjjdU_k3qmw/viewform" target="_blank">Стать волонтером</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScrxof1kHqRfcuPNhP4BjoDTIOGzT_nMThVrdDc4Fqi6gFTbw/viewform" target="_blank">Стать куратором</a></li>
+            <li><a href="https://www.wa.me/+77471856767" target="_blank">Предложить сотрудничество</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Поддержать</h4>
+          <ul>
+            <li><a href="https://www.wa.me/+77471856767" target="_blank">Пожертвовать на развитие</a></li>
+            <li><a href="mailto:uniqumunited@gmail.com" target="_blank">Пишите по почте</a></li>
+            <li><a href="https://www.wa.me/+77471856767" target="_blank">Оставить отзыв о проекте</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="footer-social">
+        <a href="mailto:uniqumunited@gmail.com" target="_blank"><img src="pochta.png" alt="Email"></a>
+        <a href="https://www.wa.me/+77471856767" target="_blank"><img src="vasap.png" alt="WhatsApp"></a>
+        <a href="https://www.instagram.com/uniqumunited/" target="_blank"><img src="instagg.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/uniqumunited/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 Uniqum. Все права защищены.</p>
+      <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    </div>
+  </footer> 
+  <!-- JS -->
+  <script src="js jast.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* ========== СБРОС И ПЕРЕМЕННЫЕ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --header-bg-color: #ffed8e;   /* Фон хедера */
+    --text-color: #444;          /* Основной цвет текста */
+    --hover-underline-color: #000;/* Подчеркивание при hover */
+    --button-bg: #000;           /* Фон кнопок */
+    --button-text: #fff;         /* Цвет текста кнопок */
+  }
+  
+  /* БАЗОВЫЕ СТИЛИ BODY */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: var(--text-color);
+  }
+  
+  /* ==================== ШАПКА (hide on scroll) ==================== */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--header-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: top 0.3s ease;
+    z-index: 9999;
+  }
+  .header__logo img {
+    height: 50px;
+    width: auto;
+  }
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+  .header__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .header__nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .header__nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-color: var(--hover-underline-color);
+    transition: width 0.3s ease;
+  }
+  .header__nav ul li a:hover::after {
+    width: 100%;
+  }
+  .header__join-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  .header__join-btn:hover {
+    background-color: #333;
+  }
+  /* Бургер (мобильное меню) */
+  .header__burger {
+    display: none;
+    cursor: pointer;
+  }
+  .header__burger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 4px 0;
+    background-color: #000;
+    transition: 0.3s ease;
+  }
+  .header__burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .header__burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .header__burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  /* Тут секция квиза*/
+  .quiz-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f9ff;
+  }
+  .quiz-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  .quiz-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .quiz-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .quiz-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .question-container {
+    margin-bottom: 20px;
+  }
+  .quiz-option {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .quiz-option:hover {
+    background: #e0f0ff;
+    border-color: #007bff;
+  }
+  .quiz-option input {
+    margin-right: 10px;
+  }
+  .quiz-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  .quiz-button:hover {
+    background: #0056b3;
+  }
+  .quiz-result-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .quiz-result-text {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .quiz-result-email {
+    font-size: 14px;
+    color: #666;
+  }
+/* Футер */
+.footer {
+    background: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
+  }
+  
+  /* --- Логотип --- */
+  .footer-logo {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-logo img {
+    max-width: 100px;  /* Уменьшаем размер */
+    border-radius: 50%; /* Делаем его круглым */
+    display: block;
+    margin: 0 auto 10px; /* Центрируем и немного поднимаем */
+  }
+  
+  /* --- Колонки --- */
+  .footer-columns {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #444;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #7d57c1;
+  }
+  
+  /* --- Соцсети --- */
+  .footer-social {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .footer-social a img {
+    width: 30px;
+    transition: opacity 0.3s;
+  }
+  
+  .footer-social a:hover img {
+    opacity: 0.7;
+  }
+  
+  /* --- Разделительная линия (НЕ на всю ширину) --- */
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 20px 0 10px;
+    position: relative;
+  }
+  
+  .footer-bottom::before {
+    content: "";
+    display: block;
+    width: 50%; /* Линия будет только на половину ширины */
+    height: 1px;
+    background: #ddd;
+    margin: 0 auto 10px; /* Центрируем и немного опускаем */
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+    color: #444;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+/* ==================== Адаптивность ==================== */
+@media (max-width: 768px) {
+    /* Бургер-меню */
+    .header__burger {
+      display: block;
+    }
+    .header__nav {
+      position: fixed;
+      top: 0; 
+      right: 0; 
+      height: 100%;
+      width: 250px; 
+      background-color: var(--header-bg-color);
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+      gap: 1rem; 
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .header__nav.active {
+      transform: translateX(0);
+    }
+    .header__nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .header__join-btn {
+      display: none;
+    }
+}
+@media (max-width: 480px) {
+    .header {
+      height: 60px; 
+      padding: 0 1rem;
+    }
+    .header__logo img {
+      height: 40px;
+    }
+}

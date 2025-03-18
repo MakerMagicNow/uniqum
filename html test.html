@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Пример: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Подключаем ваш CSS -->
+  <link rel="stylesheet" href="css test.css">
+
+  <title>Uniqum</title>
+</head>
+<body>
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header__logo">
+      <!-- Замените путь к логотипу, если нужно -->
+      <img src="unilogo.png" alt="Uniqum Logo">
+    </div>
+
+    <nav class="header__nav" id="nav">
+      <ul>
+        <li><a href="hmtl chast.html">О нас</a></li>
+        <li><a href="hmtl chast.html">Команда</a></li>
+        <li><a href="hmtl chast.html">Новости</a></li>
+        <li><a href="hmtl chast.html">Отзывы</a></li>
+        <li><a href="hmtl chast.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <button class="header__join-btn" onclick="window.location.href='https://bit.ly/m/Uniqum'">Присоединиться</button>
+
+    <!-- Бургер-меню -->
+    <div class="header__burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main>
+    <section id="quiz" class="quiz-section">
+        <div class="quiz-container" id="quiz-container">
+          <h2 class="quiz-title">Тест на вероятность аутизма</h2>
+          <div id="user-info">
+            <input type="text" id="user-name" class="quiz-input" placeholder="Введите ваше имя" required>
+            <input type="email" id="user-email" class="quiz-input" placeholder="Введите вашу почту" required>
+            <button id="start-btn" class="quiz-button" onclick="startQuiz()">Начать тест</button>
+          </div>
+          <div id="question-container" class="question-container" style="display: none;"></div>
+          <button id="next-btn" class="quiz-button" onclick="nextQuestion()" style="display: none;">Далее</button>
+        </div>
+      </section>
+    </main>
+
+    <!--Футер-->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="unilogo.png" alt="Uniqum Logo"> <!-- Использует логотип из хедера -->
+            <p>Uniqum<br>Алматы, Казахстан<br>
+            <a href="mailto:uniqumunited@gmail.com">uniqumunited@gmail.com</a></p>
+            <em>Помогаем особенным детям расти и развиваться</em>
+          </div>
+      
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h4>Дополнительно</h4>
+              <ul>
+                <li><a href="#">Получать рассылку</a></li>
+                <li><a href="https://www.wa.me/+77471856767" target="_blank">Написать по номеру</a></li>
+                <li><a href="html test.html">Пройти тест на аутизм</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Присоединиться</h4>
+              <ul>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf92NcVPTWGEq8YlEiIBqpb8MtVNGrMl7vUZqqnjjdU_k3qmw/viewform" target="_blank">Стать волонтером</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScrxof1kHqRfcuPNhP4BjoDTIOGzT_nMThVrdDc4Fqi6gFTbw/viewform" target="_blank">Стать куратором</a></li>
+                <li><a href="https://www.wa.me/+77471856767" target="_blank">Предложить сотрудничество</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Поддержать</h4>
+              <ul>
+                <li><a href="https://www.wa.me/+77471856767" target="_blank">Пожертвовать на развитие</a></li>
+                <li><a href="mailto:uniqumunited@gmail.com" target="_blank">Пишите по почте</a></li>
+                <li><a href="https://www.wa.me/+77471856767" target="_blank">Оставить отзыв о проекте</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="footer-social">
+            <a href="mailto:uniqumunited@gmail.com" target="_blank"><img src="pochta.png" alt="Email"></a>
+            <a href="https://www.wa.me/+77471856767" target="_blank"><img src="vasap.png" alt="WhatsApp"></a>
+            <a href="https://www.instagram.com/uniqumunited/" target="_blank"><img src="instagg.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/uniqumunited/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© 2025 Uniqum. Все права защищены.</p>
+          <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+        </div>
+      </footer> 
+  <!-- JS -->
+  <script src="js test.js"></script>
+</body>
+</html>
